@@ -1,0 +1,20 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+
+            <main>
+                <form action="/MyTeam" method="POST">
+                    <label for="team_name">Enter Team: </label>
+                    <input id="team_name" type="text" name="team_name" placeholder="Search Team">
+                    <input type="submit" value="Submit">
+                </form>
+                <br>
+                <form action="/Myplayer" method="POST">
+                    <label for="team_name">Enter Player: </label>
+                    <input id="player_name" type="text" name="player_name" placeholder="Search Player">
+                    <input type="submit" value="Submit">
+                </form>
+            </main>
+            <%- include('../includes/end.ejs') %>

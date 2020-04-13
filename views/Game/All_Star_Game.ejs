@@ -1,0 +1,29 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <main class="centered">
+            <h1>All Star Game</h1>
+            <table>
+                <thead>
+                <tr align="left">
+                    <th width="200">Season</th>
+                    <th width="200">West</th>
+                    <th width="200">East</th>
+                    <th width="200">MVP</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% for (let Game of Games) { %>
+                <tr align="left">
+                    <th width="200"><%= Game.Season %></th>
+                    <th width="200"><%= Game.Wresult %></th>
+                    <th width="200"><%= Game.Eresult %></th>
+                    <th width="200"><%= Game.MVP %></th>
+                </tr>
+                <% } %>
+                </tbody>
+            </table>
+        </main>
+        <%- include('../includes/end.ejs') %>

@@ -1,0 +1,33 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <main class="centered">
+            <h1>Finals</h1>
+            <table>
+                <thead>
+                <tr align="left">
+                    <th width="200">Season</th>
+                    <th width="200">Team1</th>
+                    <th width="200">Team2</th>
+                    <th width="200">Result</th>
+                    <th width="200">Champion</th>
+                    <th width="200">MVP</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% for (let Game of Games) { %>
+                <tr align="left">
+                    <th width="200"><%= Game.Season %></th>
+                    <th width="200"><a href="http://localhost:3000/Team/<%=Game.Team1%>"><%= Game.Team1 %></a></th>
+                    <th width="200"><a href="http://localhost:3000/Team/<%=Game.Team2%>"><%= Game.Team2 %></a></th>
+                    <th width="200"><%= Game.Result %></th>
+                    <th width="200"><a href="http://localhost:3000/Team/<%=Game.Champion%>"><%= Game.Champion %></a></th>
+                    <th width="200"><%= Game.MVP %></th>
+                </tr>
+                <% } %>
+                </tbody>
+            </table>
+        </main>
+        <%- include('../includes/end.ejs') %>

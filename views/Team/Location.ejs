@@ -1,0 +1,18 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+
+            <main>
+                <% if (States.length > 0) { %>
+                <select name="Award Selector" onchange="location = this.value;">
+                    <% for (let State of States) { %>
+                    <option value="http://localhost:3000/Location/<%=State.State%>"><%=State.State%></option>
+                        <% } %>
+                </select>
+                    <% } else { %>
+                        <h1>No result Found!</h1>
+                <% } %>
+            </main>
+            <%- include('../includes/end.ejs') %>

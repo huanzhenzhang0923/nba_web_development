@@ -1,0 +1,63 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+
+            <main>
+                <article class="card product-item">
+                    <h1>Eastern Conference</h1>
+                    <table>
+                        <thead>
+                        <tr align="left">
+                            <th width="200">Team</th>
+                            <th width="200">Season</th>
+                            <th width="200">Rank</th>
+                            <th width="200">Win</th>
+                            <th width="200">Lose</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <% for (let team1 of Teams) { %>
+                            <% if (team1.CID == 1){ %>
+                        <tr>
+                            <td><%=team1.Team%></td>
+                            <td><%=team1.Season%></td>
+                            <td><%=team1.Rank%></td>
+                            <td><%=team1.Win%></td>
+                            <td><%=team1.Lose%></td>
+                        </tr>
+                            <% } %>
+                        <% } %>
+                        </tbody>
+                    </table>
+                    <br>
+                    <h1>Western Conference</h1>
+                    <table>
+                        <thead>
+                        <tr align="left">
+                            <th width="200">Team</th>
+                            <th width="200">Season</th>
+                            <th width="200">Rank</th>
+                            <th width="200">Win</th>
+                            <th width="200">Lose</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <% for (let team2 of Teams) { %>
+                            <% if (team2.CID == 2){ %>
+                        <tr>
+                            <td><%=team2.Team%></td>
+                            <td><%=team2.Season%></td>
+                            <td><%=team2.Rank%></td>
+                            <td><%=team2.Win%></td>
+                            <td><%=team2.Lose%></td>
+                        </tr>
+                            <% } %>
+                        <% } %>
+                        </tbody>
+                    </table>
+                </article>
+            </main>
+            <%- include('../includes/end.ejs') %>

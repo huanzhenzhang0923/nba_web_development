@@ -1,0 +1,41 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+
+            <main>
+                <h1>Coach</h1>
+                <section class="nba-player-index__trending-item small-4 medium-3 large-2 team-atl-hawks">
+                    <h2><%=coach.Coach %></h2>
+                        <div class="nba-player-index__image_wrapper">
+                            <div class="nba-player-index__image">
+                                <div class="nba-player-index__headshot_wrapper  ">
+                                    <img class=" lazyloaded" data-src= <%= coach.URL %> onerror="this.onerror=null;window.sil(this)" src= <%= coach.URL %> >
+                                </div>
+                            </div>
+                        </div>
+                </section>
+                <br>
+                <table>
+                    <thead>
+                    <tr align="left">
+                        <th width="200">Team</th>
+                        <th width="200">College</th>
+                        <th width="200">From</th>
+                        <th width="200">To</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <tr align="left">
+                        <th width="200"><%= coach.Team %></th>
+                        <th width="200"><%= coach.College %></th>
+                        <th width="200"><%= coach.From %></th>
+                        <th width="200"><%= coach.To %> </th>
+                    </tr>
+                    </tbody>
+                </table>
+            </main>
+            <%- include('../includes/end.ejs') %>

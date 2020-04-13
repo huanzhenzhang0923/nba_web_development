@@ -1,0 +1,83 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <main class="centered">
+            <h1><%= row.Name %></h1>
+            <section class="nba-player-index__trending-item small-4 medium-3 large-2 team-atl-hawks">
+                <a title="Jaylen Adams" href="http://localhost:3000/Player/<%=row.PID%>">
+                    <div class="nba-player-index__image_wrapper">
+                        <div class="nba-player-index__image">
+                            <div class="nba-player-index__headshot_wrapper  ">
+                                <img class=" lazyloaded" data-src= <%= row.URL %> onerror="this.onerror=null;window.sil(this)" src= <%= row.URL %> >
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <p class="nba-player-index__name"><%= 'Age:' %><%= row.Age %></p>
+                <!--<a class="nba-player-index__team-image" href="/teams/hawks/">-->
+                    <!--<img alt="" src="https://www.nba.com/assets/logos/teams/primary/web/ATL.svg"></a>-->
+            </section>
+            <table>
+                <thead>
+                <tr align="left">
+                    <th width="15">G</th>
+                    <th width="15">GS</th>
+                    <th width="15">MP</th>
+                    <th width="15">FG</th>
+                    <th width="15">FGA</th>
+                    <th width="15">FG%</th>
+                    <th width="15">3P</th>
+                    <th width="15">3PA</th>
+                    <th width="15">3P%</th>
+                    <th width="15">2P</th>
+                    <th width="15">2PA</th>
+                    <th width="15">2P%</th>
+                    <th width="15">eFG%</th>
+                    <th width="15">FT</th>
+                    <th width="15">FTA</th>
+                    <th width="15">FT%</th>
+                    <th width="15">ORB</th>
+                    <th width="15">DRB</th>
+                    <th width="15">TRB</th>
+                    <th width="15">AST</th>
+                    <th width="15">STL</th>
+                    <th width="15">BLK</th>
+                    <th width="15">TOV</th>
+                    <th width="15">PF</th>
+                    <th width="15">PTS/G</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th width="15"><%= row.G %></th>
+                    <th width="15"><%= row.GS %></th>
+                    <th width="15"><%= row.MP %></th>
+                    <th width="15"><%= row.FG %> </th>
+                    <th width="15"><%= row.FGA %></th>
+                    <th width="15"><%= row.FG_percent %></th>
+                    <th width="15"><%= row._3P %></th>
+                    <th width="15"><%= row._3PA %></th>
+                    <th width="15"><%= row._3P_percent %></th>
+                    <th width="15"><%= row._2P %></th>
+                    <th width="15"><%= row._2PA %></th>
+                    <th width="15"><%= row._2P_percent %></th>
+                    <th width="15"><%= row.eFG_percent %></th>
+                    <th width="15"><%= row.FT %></th>
+                    <th width="15"><%= row.FTA %></th>
+                    <th width="15"><%= row.FT_percent %></th>
+                    <th width="15"><%= row.ORB %></th>
+                    <th width="15"><%= row.DRB %></th>
+                    <th width="15"><%= row.TRB %></th>
+                    <th width="15"><%= row.AST %></th>
+                    <th width="15"><%= row.STL %></th>
+                    <th width="15"><%= row.BLK %></th>
+                    <th width="15"><%= row.TOV %></th>
+                    <th width="15"><%= row.PF %></th>
+                    <th width="15"><%= row.PTS_perG%></th>
+                </tr>
+                </tbody>
+            </table>
+        </main>
+        <%- include('../includes/end.ejs') %>

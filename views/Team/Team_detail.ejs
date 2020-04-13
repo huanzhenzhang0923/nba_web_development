@@ -1,0 +1,31 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+
+            <main>
+                <h1>Player</h1>
+                <% if (players.length > 0) { %>
+                    <div class="grid">
+                        <% for (let player of players) { %>
+                            <h2><%= player.Name %></h2>
+                            <section class="nba-player-index__trending-item small-4 medium-3 large-2 team-atl-hawks">
+                                <a href="http://localhost:3000/Player/<%=player.PID%>">
+                                    <div class="nba-player-index__image_wrapper">
+                                        <div class="nba-player-index__image">
+                                            <div class="nba-player-index__headshot_wrapper  ">
+                                                <img class=" lazyloaded" data-src= <%= player.URL %> onerror="this.onerror=null;window.sil(this)" src= <%= player.URL %> >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <p class="nba-player-index__name"><%= 'Age:' %><%= player.Age %></p>
+                            </section>
+                            <% } %>
+                    </div>
+                    <% } else { %>
+                        <h1>No result Found!</h1>
+                        <% } %>
+            </main>
+            <%- include('../includes/end.ejs') %>

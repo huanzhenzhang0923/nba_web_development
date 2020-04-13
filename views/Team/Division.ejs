@@ -1,0 +1,36 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+
+            <main>
+                <div class="grid">
+                    <% for (let conference of conferences) { %>
+                        <% for (let Division of Divisions) { %>
+                            <article class="card product-item">
+                                <h1><%=conference%></h1>
+                                <table>
+                                    <thead>
+                                    <tr align="left">
+                                        <th width="400">Team</th>
+                                        <th width="300">Rank</th>
+                                        <th width="300">Win</th>
+                                        <th width="300">Lose</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><%=Team.Team%></td>
+                                        <td><%=Team.Rank%></td>
+                                        <td><%=Team.Win%></td>
+                                        <td><%=Team.Lose%></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </article>
+                        <% } %>
+                    <% } %>
+                </div>
+            </main>
+            <%- include('../includes/end.ejs') %>

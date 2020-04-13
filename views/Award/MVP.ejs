@@ -1,0 +1,34 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+
+            <main>
+                <select name="Award Selector" onchange="location = this.value;">
+                    <option value="http://localhost:3000/Award/MVP">Most Valuable Player</option>
+                    <option value="http://localhost:3000/Award/SOY">Six Man of the year</option>
+                    <option value="http://localhost:3000/Award/MIP">Most Improved Player</option>
+                    <option value="http://localhost:3000/Award/DPOY">Defensive Player of the year</option>
+                    <option value="http://localhost:3000/Award/COY">Coach of the year</option>
+                    <option value="http://localhost:3000/Award/ROY">Rookie of the year</option>
+                </select>
+                <table>
+                    <thead>
+                    <h1>Most Valuable Player</h1>
+                    <tr align="left">
+                        <th width="200">Season</th>
+                        <th width="200">Player</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% for (let player of players) { %>
+                    <tr align="left">
+                        <th width="200"><%= player.Season %></th>
+                        <th width="200"><%= player.PlayerName %></th>
+                    </tr>
+                    <% } %>
+                    </tbody>
+                </table>
+            </main>
+            <%- include('../includes/end.ejs') %>
